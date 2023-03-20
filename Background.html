@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Cancer Recurrence Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Breast Cancer Recurrence Predictor</h1>
+    <form id="prediction-form">
+        <label for="patient-name">Patient Name</label>
+        <input type="text" id="patient-name" name="patient-name" required>
+        
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" required>
+        
+        <label for="sex">Sex</label>
+        <select id="sex" name="sex" required>
+            <option value="">--Please select--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        
+        <label for="race">Race</label>
+        <select id="race" name="race" required>
+            <option value="">--Please select--</option>
+            <option value="white">White</option>
+            <option value="black">Black/African American</option>
+            <option value="native-american">American Indian/Alaska Native</option>
+            <option value="asian">Asian</option>
+            <option value="pacific-islander">Native Hawaiian/Other Pacific Islander</option>
+        </select>
+        <label for="data-file">Data File</label>
+        <input type="file" id="data-file" name="data-file" accept=".csv, .bin, .txt" required>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="result" class="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
